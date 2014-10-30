@@ -4,6 +4,7 @@ alias subl='sublime-text > /dev/null 2>&1'
 alias evince='evince > /dev/null 2>&1'      # Remove stdout and stderr 
 alias vmware='/usr/bin/vmplayer'            # VMWare
 alias flux='~/scripts/xfluxLoc'             # Start f.lux with local settings
+alias intellij='~/scripts/windowH && ~/idea-IU-135.1289/bin/idea.sh'
 alias netbeans='~/netbeans-8.0.1/bin/netbeans'
 #alias read='FBReader'
 alias ls='ls -a --color=auto'
