@@ -1,0 +1,12 @@
+[push]
+   default = simple
+[branch]
+   autosetuprebase = always
+[color]
+   ui = true
+   status = auto
+   branch = auto
+[core]
+   editor = vim
+   excludesfile = /home/ts/.gitignore_global
+
