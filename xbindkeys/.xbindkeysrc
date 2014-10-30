@@ -1,0 +1,48 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.6
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+# To see the default config file run: xbindkeys --defaults
+#==============================================================================
+
+# Firefox -- Ctrl+ Alt + F
+"firefox"
+  m:0x4 + m:0x8 + c:41
+
+# Sublime -- Ctrl + Alt + S
+"subl"
+  m:0x4 + m:0x8 + c:39
+
+# Thunderbird -- Mod4 + Alt + T
+"thunderbird"
+  m:0x40 + m:0x8 + c:28
+
+# Lock screen -- Ctrl + Alt + L
+"./scripts/lockit"
+  m:0x4 + m:0x8 + c:46   
+
+# Open files -- AltGr + T
+"nemo /home/ts/My-files"
+m:0x80 + T  
+
+# Turn off  -- Mod4 + ` (near the 1 key)
+"gksu poweroff"
+m:0x40 + c:49
+
+
+##################################
+# End of xbindkeys configuration #
+##################################
