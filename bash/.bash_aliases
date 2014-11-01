@@ -1,5 +1,6 @@
 
 ########## PROGRAMS ##########
+alias ff='firefox'
 alias subl='sublime-text > /dev/null 2>&1'
 alias evince='evince > /dev/null 2>&1'      # Remove stdout and stderr 
 alias vmware='/usr/bin/vmplayer'            # VMWare
@@ -10,6 +11,7 @@ alias netbeans='~/netbeans-8.0.1/bin/netbeans'
 alias ls='ls -a --color=auto'
 alias sl='ls'
 alias LS='ls'
+alias CD='cd'
 
 ########## INTERNET ##########
 alias fgoo='firefox http://google.com &'
