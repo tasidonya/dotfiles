@@ -16,6 +16,7 @@
 #       associated key
 #
 # To see the default config file run: xbindkeys --defaults
+# In xev, state is the m: code, keycode is the c: code
 #==============================================================================
 
 # Firefox -- Ctrl+ Alt + F
@@ -32,7 +33,11 @@
 
 # Lock screen -- Ctrl + Alt + L
 "./scripts/lockit"
-  m:0x4 + m:0x8 + c:46   
+  m:0x4 + m:0x8 + c:46
+
+# Open noise -- AltGr + N
+"xdg-open /media/ts/New\ Volume/brown_noise.webm"
+m:0x80 + N       
 
 # Open files -- AltGr + T
 "nemo /home/ts/My-files"
@@ -42,6 +47,25 @@ m:0x80 + T
 "gksu poweroff"
 m:0x40 + c:49
 
+#Timer -- Mod + AltGr + T
+"wine ~/My-files/My\ Goodies/stopwatch/candle-timer.exe"
+m:0x40 + m:0x80 + T
+
+#Stopwatch -- Mod + AltGr + S
+"wine ~/My-files/My\ Goodies/stopwatch/online-stopwatch.exe"
+m:0x40 + m:0x80 + S
+
+#Raise vol
+"amixer -c 0 set Master 1+ unmute"
+m:0x0 + c:123
+
+#Lower vol
+"amixer -c 0 set Master 1- unmute"
+m:0x0 + c:122
+
+#Capture area -- Pause key
+"scrot -s '/home/ts/%H%M%S-%Y%m%d-screenshot.png'"
+m:0x0 + c:127
 
 ##################################
 # End of xbindkeys configuration #

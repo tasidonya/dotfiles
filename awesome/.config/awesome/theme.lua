@@ -74,7 +74,7 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "awsetbg /home/ts/Pictures/AsCalmAsNature_1920x1200_Mart_Biemans2.jpg" }
+-- theme.wallpaper_cmd = { "awsetbg /home/ts/Pictures/AsCalmAsNature_1920x1200_Mart_Biemans2.jpg" }
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
@@ -90,8 +90,8 @@ theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
 theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
---theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
-theme.awesome_icon = "/home/ts/.config/awesome/icons/awesome-icon.png"
+theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
+-- theme.awesome_icon = "/home/ts/.config/awesome/icons/awesome-icon.png"
 theme.folder_icon = "/home/ts/.config/awesome/icons/Folder-icon.png"
 theme.notes_icon = "/home/ts/.config/awesome/icons/Notes-icon.png"
 theme.lock_icon = "/home/ts/.config/awesome/icons/lock.png"

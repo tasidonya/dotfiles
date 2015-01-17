@@ -43,6 +43,8 @@ awful.util.spawn_with_shell("xcompmgr -cF &")
 -- Start xbindkeys
 awful.util.spawn_with_shell("xbindkeys")
 
+-- Start Dropbox daemon
+--awful.util.spawn_with_shell("~/.dropbox-dist/dropboxd")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
@@ -93,7 +95,19 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     --tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
-    tags[s] = awful.tag({" α ", " β ", " γ ", " δ ", " ε ", " ζ ",  " η ",  " Θ ", " λ "}, s, layouts[1])
+    tags[s] = awful.tag({" α ", " β  ", " γ ", " δ ", " ε ", " ζ ",  " η ",  " Θ ", " λ "}, s, layouts[1])
+end
+-- }}}
+
+-- {{{ Tag Wallpapers
+for s = 1, screen.count() do
+    for t = 1, 9 do
+        tags[s][t]:add_signal("property::selected", function (tag)
+            if not tag.selected then return end
+            wallpaper_cmd = "awsetbg /home/ts/Pictures/wallpapers/wallpaper" .. t .. ".jpg"
+            awful.util.spawn(wallpaper_cmd)
+        end)
+    end
 end
 -- }}}
 
@@ -113,6 +127,7 @@ configmenu = {
   {"startup script", editor_cmd .. " " .. "~/scripts/startup"},
   {"git config", editor_cmd .. " " .. "~/"},
   {"vim config", editor_cmd .. " " .. "~/.vimrc"},
+  {"zshrc", editor_cmd .. " " .. "~/.zshrc"},
 
 }
 
@@ -353,7 +368,7 @@ globalkeys = awful.util.table.join(
     -- Custom keysq
     awful.key({ modkey, "Control"}, "c", function () awful.util.spawn("firefox") end),
     awful.key({ modkey, "Control"}, "v", function () awful.util.spawn("thunderbird") end),
-    awful.key({ }, "#107", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
+    awful.key({ }, "#107", function () awful.util.spawn("deepin-scrot") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
